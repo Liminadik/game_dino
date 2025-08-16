@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Mozilla+Text:wght@200..700&display=swap');
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow-x: hidden;
+    position: fixed;
+    min-width: 101vw;
+}
+.game {
+    min-height: 100vh;
+    background-color:skyblue;
+}
+#ground_line {
+    min-height: 0.5vh;
+    background-color:black;
+    position: relative;
+    top: 60vh;
+}
+#ground {
+    min-height: 39.5vh;
+    background-color:rgb(99, 61, 12);
+    position: relative;
+    top: 60vh;
+}
+#menu {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(0, 42, 143);
+    position: relative;
+    top: -53vh;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: #0c50cd solid 1vh;
+    border-left: #0c50cd solid 1vh;
+    border-right: #0c50cd solid 1vh;
+}
+#metres {
+    height: 10vh;
+    width: 94vw;
+    text-align: center;
+    font-size: 5vh;
+    font-family: "Google Sans Code", monospace;
+    margin: auto;
+    position: relative;
+    left: 100%;
+    top: 84vh;
+
+}
+#button_start {
+    height: 9vh;
+    background-color: #6fff35;
+    border-top-left-radius: 1vh;
+    border-top-right-radius: 1vh;
+    border-top: #33b600 solid 1vh;
+    border-right: #33b600 solid 1vh;
+    border-left: #33b600 solid 1vh;
+    border-bottom: #33b600 solid 1vh;
+    position: relative;
+    top: 90vh;
+}
+#button_start_text {
+    font-size: 4.5vh;
+    font-family: "Google Sans Code", monospace;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+#dino {
+    height: 7vh;
+    width: 7vh;
+    background-image: url("img/dino.png");
+    background-size: cover;
+    position: relative;
+    top: 13vh;
+    left: 20vw;
+}
+#hitbox_dino {
+    height: 6.5vh;
+    width: 5vh;
+    position: relative;
+    top: 0.5vh;
+    left: 0.5vw;
+}
+#cactus {
+    height: 6vh;
+    width: 6vh;
+    background-image: url("img/cactus.png");
+    background-size: cover;
+    position: relative;
+    top: 7vh;
+    left: 110vw;
+}
+#hitbox_cactus {
+    height: 5.5vh;
+    width: 5vh;
+    position: relative;
+    top: 0.5vh;
+    left: 0.6vw;
+}
+.cactusMuv {
+    animation-name: cactusMuv;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes cactusMuv {
+    0% {
+        left: 103vw;
+    }
+    100% {
+        left: -35vw;
+    }
+}
+.jump {
+    animation: jump 0.7s linear;
+}
+@keyframes jump {
+    0% {
+        top: 13vh;
+    }
+    25% {
+        top: 1vh;
+    }
+    50% {
+        top: 0vh;
+    }
+    55% {
+        top: 0vh;
+    }
+    70% {
+        top: 1vh;
+    }
+    80% {
+        top: 5svh;
+    }
+    100% {
+        top: 13vh;
+    }
+}
+.menu_down {
+    animation: menu_down 0.3s linear;
+    animation-fill-mode: forwards;
+}
+@keyframes menu_down {
+    0% {
+        top: -146vh;
+    }
+    80% {
+        border-bottom-left-radius: 2vh;
+        border-bottom-right-radius: 2vh;
+    }
+    100% {
+        top: -53vh;
+        border-bottom-left-radius: 0vh;
+        border-bottom-right-radius: 0vh;
+    }
+}
+.menu_up {
+    animation: menu_up 0.3s linear;
+    animation-fill-mode: forwards;
+}
+@keyframes menu_up {
+    0% {
+        top: -53vh;
+        border-bottom-left-radius: 0vh;
+        border-bottom-right-radius: 0vh;
+    }
+    20% {
+        border-bottom-left-radius: 1vh;
+        border-bottom-right-radius: 1vh;
+    }
+    100% {
+        border-bottom-left-radius: 1vh;
+        border-bottom-right-radius: 1vh;
+        top: -146vh;
+    }
+}
+.button_start_left {
+    animation: button_start_left 0.2s linear;
+    animation-fill-mode: forwards;
+}
+@keyframes button_start_left {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -110%;
+    }
+}
+.button_start_right {
+    animation: button_start_right 0.2s linear;
+    animation-fill-mode: forwards;
+}
+@keyframes button_start_right {
+    0% {
+        left: -110%;
+    }
+    100% {
+        left: 0;
+    }
+}
+.metres_left {
+    animation: metres_left 0.2s linear;
+    animation-fill-mode: forwards;
+}
+@keyframes metres_left {
+    0% {
+        left: 100%;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+.metres_right {
+    animation: metres_right 0.2s linear;
+    animation-fill-mode: forwards;
+}
+@keyframes metres_right {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 100%;
+    }
+}
